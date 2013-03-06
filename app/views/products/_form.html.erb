@@ -1,0 +1,14 @@
+ <%= semantic_form_for @product do |f| %>
+    <%= f.inputs do %>
+    <%= f.input : %>
+    <%= f.actions %>
+  <% end %>
+
+
+ <%= f.inputs do %>
+      <%= f.input :title %>
+      <%= f.input :body %>
+      <%= f.input :section, :as => :radio %>
+      <%= f.input :categories %>
+      <%= f.input :created_at, :as => :string %>
+    <% end %>
