@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
-  before_filter :authenticate_user!
+
 
   def index
     @products = Product.all
@@ -21,6 +21,11 @@ class ProductsController < ApplicationController
       format.html # show.html.erb
       format.json { render json: @product }
     end
+  end
+
+  # GET /products/add
+  def add
+    raise params.inspect
   end
 
   # GET /products/new

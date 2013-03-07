@@ -1,7 +1,16 @@
 GameImporter::Application.routes.draw do
+  get "admin/index"
+
+  get "admin/edit"
+
   devise_for :users
 
-  resources :products
+  resources :products do
+    member do
+      get 'add'
+    end
+  end
+
 
 
   # The priority is based upon order of creation:

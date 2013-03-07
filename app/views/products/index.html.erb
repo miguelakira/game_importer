@@ -10,7 +10,6 @@
     <th>Console</th>
     <th></th>
     <th></th>
-    <th></th>
   </tr>
 
 <% @products.each do |product| %>
@@ -22,8 +21,7 @@
     <td><%= product.quantity %></td>
     <td><%= product.console_id %></td>
     <td><%= link_to 'Show', product %></td>
-    <td><%= link_to 'Edit', edit_product_path(product) %></td>
-    <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Add to Cart', add_product_path(product) %></td>
   </tr>
 <% end %>
 </table>
