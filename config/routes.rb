@@ -1,4 +1,10 @@
 GameImporter::Application.routes.draw do
+  
+
+  
+
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
   get "admin/index"
 
   get "admin/edit"

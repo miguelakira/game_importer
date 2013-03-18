@@ -8,8 +8,6 @@
     <th>Discount</th>
     <th>Quantity</th>
     <th>Console</th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @products.each do |product| %>
@@ -19,10 +17,7 @@
     <td><%= product.description %></td>
     <td><%= product.discount %></td>
     <td><%= product.quantity %></td>
-    <td><%= product.console_id %></td>
-    <td><%= link_to 'Show', product %></td>
-    <td><%= link_to 'Add to Cart', add_product_path(product) %></td>
-  </tr>
+    <td><%= product.console.name %></td>
 <% end %>
 </table>
 
