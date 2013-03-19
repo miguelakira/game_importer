@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130318203511) do
+ActiveRecord::Schema.define(:version => 20130319184107) do
 
   create_table "carts", :force => true do |t|
     t.integer  "user_id"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(:version => 20130318203511) do
     t.datetime "updated_at",                                :null => false
     t.decimal  "cost",        :precision => 8, :scale => 2
     t.integer  "sales"
+    t.string   "image_url"
   end
 
   create_table "rails_admin_histories", :force => true do |t|
