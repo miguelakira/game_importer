@@ -1,17 +1,143 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta http-equiv = "Content-Type" content = "text/html; charset=iso-8859-1">
   <title>GameImporter</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <!--[if IE 6]><%= stylesheet_link_tag 'ie6' %><![endif]-->
   <!--[if IE 7]><%= stylesheet_link_tag 'ie7' %><![endif]-->
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "easySlider1.5" %>
+  <%= javascript_include_tag "hoverintent" %>
+  <%= javascript_include_tag "superfish" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+<div id="page">
+  <div class="left">
+    <div id="header">
+      <div class="logo">
+        <h1><a href="#" title="Aspirina com Café">Loja Aspirina com Café</a></h1>
+        <div class="clr"></div>
+      </div>
+      <!--/logo -->
+      <div id="rightcol">
+        <div class="box">
+          <h3>Search:</h3>
+          <div class="content search">
+            <form id="form" name="form" method="post" action="">
+              <span>
+              <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="Search our site" />
+              <input name="b" type="image" src="/assets/search.gif" class="button" />
+              </span>
+            </form>
+            <div class="clr"></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <h3>Navegação:</h3>
+          <div class="content">
+            <ul class="list">
+              <li><a href="#" class="active" rel="tabs_archive">Consoles</a></li>
+              <li><a href="#" rel="tabs_links">Arquivos </a></li>
+              <li><a href="#" rel="tabs_meta" class="last">Páginas</a></li>
+            </ul>
+            <div class="tabs_archive tabs_list">
+              <% Console.all.each do |console| %>
+              <ul class="sf-menu sf-js-enabled">
+                <li class="cat-item cat-item-1"> <%= link_to console.name, "#" %>
+                  <ul class='children'>
+                    <li class="cat-item cat-item-5"><a href="http://www.templateaccess.com/wpdemos/wp25/?cat=5" title="Proin venenatis porttitor nisi, et porta arcu consequat vel.">Jogos</a> </li>
+                    <li class="cat-item cat-item-3"><a href="http://www.templateaccess.com/wpdemos/wp25/?cat=3" title="Proin venenatis porttitor nisi, et porta arcu consequat vel.">Acessórios</a> </li>
+                    <li class="cat-item cat-item-4"><a href="http://www.templateaccess.com/wpdemos/wp25/?cat=4" title="Proin venenatis porttitor nisi, et porta arcu consequat vel.">Usados</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <% end %>
+            </div>
+            <div class="tabs_links tabs_list">
+              <ul>
+                <li><a href="#" rel="bookmark" title="Permanent Link: Привет, мир!">Привет, мир!</a></li>
+                <li><a href="#" rel="bookmark" title="Permanent Link: Детали">Детали</a></li>
+              </ul>
+            </div>
+            <!-- Start Meta -->
+            <div class="tabs_meta tabs_list">
+              <ul>
+                <li><a href="#">Администрирование</a></li>
+                <li><a href="#">Выйти</a></li>
+                <li><a href="#" title="This page validates as XHTML 1.0 Transitional"> Valid <abbr title="eXtensible HyperText Markup Language">XHTML</abbr></a></li>
+                <li><a href="#"><abbr title="XHTML Friends Network"> XFN</abbr></a></li>
+                <li><a href="#" title="Powered by WordPress, state-of-the-art semantic personal publishing platform."> WordPres</a></li>
+              </ul>
+            </div>
+            <!-- End Meta -->
+          </div>
+          <!--/content -->
+        </div>
+        <!--/box -->
+        <div class="box widget widget_flickrRSS">
+          <h3>Imperdíveis</h3>
+          <div class="content"> <a href="#" title="_DSC1889"><img src="http://farm5.static.flickr.com/4036/4419080841_33b68e880a_s.jpg" alt="_DSC1889"/></a><a href="#" title="_MG_1634"><img src="http://farm5.static.flickr.com/4003/4419080843_5b7a0f4e42_s.jpg" alt="_MG_1634"/></a><a href="#" title="Trail de la Sainte Baume 2010 (499)"><img src="http://farm3.static.flickr.com/2707/4419080845_a50af85173_s.jpg" alt="Trail de la Sainte Baume 2010 (499)"/></a><a href="#" title="x8937"><img src="http://farm3.static.flickr.com/2714/4419080847_eed7010bbc_s.jpg" alt="x8937"/></a><a href="#" title="015"><img src="http://farm3.static.flickr.com/2697/4419080853_f19257fba9_s.jpg" alt="015"/></a><a href="#" title="9"><img src="http://farm3.static.flickr.com/2752/4419080869_b7025c20d3_s.jpg" alt="9"/><img src="http://farm3.static.flickr.com/2752/4419080869_b7025c20d3_s.jpg" alt="9"/><img src="http://farm3.static.flickr.com/2752/4419080869_b7025c20d3_s.jpg" alt="9"/><img src="http://farm3.static.flickr.com/2752/4419080869_b7025c20d3_s.jpg" alt="9"/></a>
+          </div>
+          <!--/content -->
+        </div>
+        <!--/box -->
+        <div class="box ads">
+          <div class="content"> <a href="#" title="GoMedia Arsenal" target="_blank"><img src="/assets/banner_img_1.gif" alt="GoMedia Arsenal" width="250" height="109" /></a> <a href="#" title="GoMedia Arsenal" target="_blank"><img src="/assets/banner_img_2.gif" alt="GoMedia Arsenal" width="250" height="115" /></a>
+            <!--<a href="#"><img src="/assets/ad2.gif" alt="" /></a> -->
+          </div>
+          <!--/content -->
+        </div>
+        <!--/box -->
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="topnav">
+      <ul>
+        <li class="current_page_item"><a href="#" title="Demo 2 Blog"><span>Home</span></a></li>
+        <li class="page_item page-item-2"><a href="#" title="About"><span>About Us</span></a></li>
+        <li class="page_item page-item-3"><a href="#" title="Arhives"><span>Arhives</span></a></li>
+        <li class="page_item page-item-4"><a href="#" title="Contact us"><span>Contact us</span></a></li>
+      </ul>
+      <div class="clr"></div>
+    </div>
+    <!--/topnav -->
+    <div class="rss"> <a href="#"><img src="/assets/RSS.gif" alt="RSS" width="57" height="59" border="0" /></a></div>
+    <div class="clr"></div>
+    <div class="gallery">
+      <div id="slider">
+        <ul>
+          <li><a href="#"><img src="/assets/simple_img_1.jpg" alt="screen 1" width="604" height="342" border="0"  /></a></li>
+          <li><a href="#"><img src="/assets/simple_img_2.jpg" alt="screen 1" width="604" height="342" border="0"  /></a></li>
+          <li><a href="#"><img src="/assets/simple_img_3.jpg" alt="screen 1" width="604" height="342" border="0"  /></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clr"></div>
+    <div id="centercol">
 <%= yield %>
 
+    </div>
+    <!--/centercol -->
+  </div>
+    <!--/right -->
+  <div class="clr"></div>
+</div>
+<!--/page -->
+<div id="page-bot">
+  <div id="footer">
+    <div class="text">&copy; Aspirina com Café. Todos os Direitos Reservados<br />
+    </div>
+    <div class="clr"></div>
+  </div>
+  <!--/footer -->
+</div>
+<!--/page-bot -->
 </body>
 </html>

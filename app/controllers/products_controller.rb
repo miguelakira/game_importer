@@ -4,7 +4,8 @@ class ProductsController < ApplicationController
 
 
   def index
-    @products = Product.all
+    console_id = params[:console_id] unless params[:console_id].nil?
+    @products = Product.where(:console_id => console_id)
 
     respond_to do |format|
       format.html # index.html.erb

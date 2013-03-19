@@ -1,2 +1,23 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<p>
+  <h1>Jogos mais Vendidos</h1>
+</p>
+
+<% @consoles.each do |console| %>
+  <h3><%= console.name %></h3>
+  <table>
+    <tr>
+      <th>Nome</th>
+      <th>Preço</th>
+      <th>Vendidos</th>
+    </tr>
+
+    <% console.products.order('sales DESC').limit(5).each do |product| %>
+    <tr>
+      <td><%= product.name %></td>
+      <td><%= product.price %></td>
+      <td><%= product.sales %></td>
+    </tr>
+  <% end %>
+  </table>
+<% end %>
+
