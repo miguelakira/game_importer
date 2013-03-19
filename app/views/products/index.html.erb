@@ -12,6 +12,7 @@
 
 <% @products.each do |product| %>
   <tr>
+    <td><%= image_tag product.image_url unless product.image_url.nil? %></td>
     <td><%= product.name %></td>
     <td><%= product.price %></td>
     <td><%= product.description %></td>
