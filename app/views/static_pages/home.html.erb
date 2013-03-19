@@ -1,23 +1,36 @@
-<p>
-  <h1>Jogos mais Vendidos</h1>
-</p>
+<div class="box post" id="post-1">
+        <div class="content">
+          <div class="post-title">
+            <h2>Jogos mais Vendidos</h2>
+          </div>
+          <!--/post-title -->
+          <div class="clr"></div>
 
 <% @consoles.each do |console| %>
+  <% unless console.products.empty? %>
   <h3><%= console.name %></h3>
-  <table>
+    <table>
     <tr>
       <th>Nome</th>
       <th>Preço</th>
       <th>Vendidos</th>
     </tr>
 
-    <% console.products.order('sales DESC').limit(5).each do |product| %>
-    <tr>
-      <td><%= product.name %></td>
-      <td><%= product.price %></td>
-      <td><%= product.sales %></td>
-    </tr>
-  <% end %>
+      <% console.products.order('sales DESC').limit(5).each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.price %></td>
+        <td><%= product.sales %></td>
+      </tr>
+    <% end %>
+    <% end %>
   </table>
 <% end %>
 
+</div>
+        <!--/content -->
+        <div class="clr"></div>
+      </div>
+      <!--/box -->
+      <div class="clr"></div>
+      </div>

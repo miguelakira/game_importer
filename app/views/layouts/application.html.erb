@@ -43,14 +43,13 @@
             <ul class="list">
               <li><a href="#" class="active" rel="tabs_archive">Consoles</a></li>
               <li><a href="#" rel="tabs_links">Arquivos </a></li>
-              <li><a href="#" rel="tabs_meta" class="last">Páginas</a></li>
             </ul>
             <div class="tabs_archive tabs_list">
               <% Console.all.each do |console| %>
               <ul class="sf-menu sf-js-enabled">
                 <li class="cat-item cat-item-1"> <%= link_to console.name, "#" %>
                   <ul class='children'>
-                    <li class="cat-item cat-item-5"><a href="http://www.templateaccess.com/wpdemos/wp25/?cat=5" title="Proin venenatis porttitor nisi, et porta arcu consequat vel.">Jogos</a> </li>
+                    <li class="cat-item cat-item-5"><%= link_to "Jogos", :controller => :products, :action => :index, :console_id => console.id %></li>
                     <li class="cat-item cat-item-3"><a href="http://www.templateaccess.com/wpdemos/wp25/?cat=3" title="Proin venenatis porttitor nisi, et porta arcu consequat vel.">Acessórios</a> </li>
                     <li class="cat-item cat-item-4"><a href="http://www.templateaccess.com/wpdemos/wp25/?cat=4" title="Proin venenatis porttitor nisi, et porta arcu consequat vel.">Usados</a>
                     </li>
@@ -65,16 +64,7 @@
                 <li><a href="#" rel="bookmark" title="Permanent Link: Детали">Детали</a></li>
               </ul>
             </div>
-            <!-- Start Meta -->
-            <div class="tabs_meta tabs_list">
-              <ul>
-                <li><a href="#">Администрирование</a></li>
-                <li><a href="#">Выйти</a></li>
-                <li><a href="#" title="This page validates as XHTML 1.0 Transitional"> Valid <abbr title="eXtensible HyperText Markup Language">XHTML</abbr></a></li>
-                <li><a href="#"><abbr title="XHTML Friends Network"> XFN</abbr></a></li>
-                <li><a href="#" title="Powered by WordPress, state-of-the-art semantic personal publishing platform."> WordPres</a></li>
-              </ul>
-            </div>
+
             <!-- End Meta -->
           </div>
           <!--/content -->
@@ -88,7 +78,7 @@
         </div>
         <!--/box -->
         <div class="box ads">
-          <div class="content"> <a href="#" title="GoMedia Arsenal" target="_blank"><img src="/assets/banner_img_1.gif" alt="GoMedia Arsenal" width="250" height="109" /></a> <a href="#" title="GoMedia Arsenal" target="_blank"><img src="/assets/banner_img_2.gif" alt="GoMedia Arsenal" width="250" height="115" /></a>
+          <div class="content"> <a href="#" title="GoMedia Arsenal" target="_blank"><img src="/assets/banner_img_1.gif" alt="GoMedia Arsenal" width="180" height="109" /></a> <a href="#" title="GoMedia Arsenal" target="_blank"><img src="/assets/banner_img_2.gif" alt="GoMedia Arsenal" width="180" height="115" /></a>
             <!--<a href="#"><img src="/assets/ad2.gif" alt="" /></a> -->
           </div>
           <!--/content -->
@@ -101,21 +91,21 @@
     <div class="topnav">
       <ul>
         <li class="current_page_item"><a href="#" title="Demo 2 Blog"><span>Home</span></a></li>
-        <li class="page_item page-item-2"><a href="#" title="About"><span>About Us</span></a></li>
-        <li class="page_item page-item-3"><a href="#" title="Arhives"><span>Arhives</span></a></li>
-        <li class="page_item page-item-4"><a href="#" title="Contact us"><span>Contact us</span></a></li>
+        <li class="page_item page-item-2"><a href="#" title="About"><span>Sobre</span></a></li>
+        <li class="page_item page-item-3"><a href="#" title="Arhives"><span>Ajuda</span></a></li>
+        <li class="page_item page-item-4"><a href="#" title="Contact us"><span>Contato</span></a></li>
       </ul>
       <div class="clr"></div>
     </div>
     <!--/topnav -->
-    <div class="rss"> <a href="#"><img src="/assets/RSS.gif" alt="RSS" width="57" height="59" border="0" /></a></div>
+    <!--<div class="rss"> <a href="#"><img src="/assets/RSS.gif" alt="RSS" width="57" height="59" border="0" /></a></div>-->
     <div class="clr"></div>
     <div class="gallery">
       <div id="slider">
         <ul>
-          <li><a href="#"><img src="/assets/simple_img_1.jpg" alt="screen 1" width="604" height="342" border="0"  /></a></li>
-          <li><a href="#"><img src="/assets/simple_img_2.jpg" alt="screen 1" width="604" height="342" border="0"  /></a></li>
-          <li><a href="#"><img src="/assets/simple_img_3.jpg" alt="screen 1" width="604" height="342" border="0"  /></a></li>
+          <li><a href="#"><img src="/assets/simple_img_1.jpg" alt="screen 1" width="704" height="342" border="0"  /></a></li>
+          <li><a href="#"><img src="/assets/simple_img_2.jpg" alt="screen 1" width="704" height="342" border="0"  /></a></li>
+          <li><a href="#"><img src="/assets/simple_img_3.jpg" alt="screen 1" width="704" height="342" border="0"  /></a></li>
         </ul>
       </div>
     </div>
