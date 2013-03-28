@@ -12,6 +12,7 @@ gem 'devise'
 gem 'formtastic'
 gem 'rails_admin'
 gem 'paper_trail'
+gem 'mercadopago'
 
 # Gems used only for assets and not required
 # in production environments by default.

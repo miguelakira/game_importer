@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+   <%= image_tag @product.image_url  %>
+</p>
+<p>
   <b>Name:</b>
   <%= @product.name %>
 </p>
@@ -27,9 +30,8 @@
 
 <p>
   <b>Console:</b>
-  <%= @product.console_id %>
+  <%= @product.console.name %>
 </p>
-
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
