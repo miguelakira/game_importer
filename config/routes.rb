@@ -1,5 +1,11 @@
 GameImporter::Application.routes.draw do
 
+  resources :line_items
+
+
+  resources :carts
+
+
   get "static_pages/home"
 
   get "static_pages/help"

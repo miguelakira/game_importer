@@ -20,6 +20,7 @@
     <td><%= product.discount %></td>
     <td><%= product.quantity %></td>
     <td><%= product.console.name %></td>
+    <td><%= button_to 'Adicionar ao Carrinho', line_items_path(product_id: product) %></td>
 <% end %>
 </table>
 
