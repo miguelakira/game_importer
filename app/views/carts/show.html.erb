@@ -1,11 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <h2>Seu Carrinho</h2>
-<ul>
-  <% @cart.line_items.each do |item| %>
-    <li><%= item.quantity %> &times; <%= item.product.name%> <%= item.product.console.name %> R$<%= item.product.price * item.quantity %> </li>
-  <% end %>
-</ul>
+<table>
+  <%= render @cart.line_items %>
+    <tr>
+      <td>Total</td>
+      <td><%= number_to_currency(@cart.total_price) %></td>
+    </tr>
+  </table>
 
 <%= button_to 'Esvaziar Carrinho', @cart, :method => :delete, :data => {:confirm => 'are you sure?'} %>
 <%= link_to 'Edit', edit_cart_path(@cart) %> |
